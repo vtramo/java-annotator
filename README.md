@@ -5,6 +5,9 @@
 # 🏷️ Java Annotator CLI [![Crates.io][crates-badge]][crates-url] ![License][license-badge]
 A simple CLI tool to automatically annotate Java source code files.
 
+# 💡 What It Does
+This tool adds the specified annotations to all encountered Java types (classes, interfaces, enums, etc.) that do not already possess that particular annotation.
+
 ## Usage
 Process Java files in a path (file or directory) with specified annotations.
 ```bash
