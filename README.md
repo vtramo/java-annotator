@@ -1,4 +1,8 @@
-# 🏷️ Java Annotator CLI
+[crates-url]: https://crates.io/crates/annotator
+[license-badge]: https://img.shields.io/crates/l/async-traceroute.svg
+[crates-badge]: https://img.shields.io/crates/v/async-traceroute.svg
+
+# 🏷️ Java Annotator CLI [![Crates.io][crates-badge]][crates-url] ![License][license-badge]
 A simple CLI tool to automatically annotate Java source code files.
 
 ## Usage
