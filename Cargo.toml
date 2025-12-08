@@ -2,6 +2,13 @@
 name = "annotator"
 version = "0.1.0"
 edition = "2024"
+authors = ["vtramo <vv.tramo@gmail.com>"]
+description = "A simple CLI tool to automatically annotate Java source code files."
+repository = "https://github.com/vtramo/java-annotator"
+readme = "README.md"
+keywords = ["java"]
+categories = ["command-line-utilities"]
+license = "MIT"
 
 [dependencies]
 tree-sitter = "0.25.10"
