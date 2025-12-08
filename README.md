@@ -13,7 +13,7 @@ that do not already possess that particular Java annotation.
 - Annotations are only added to the type declaration itself; methods, fields, and parameters are currently ignored.
 - The tool does not check if the annotation's usage is valid on the specific type.
 - The tool is guaranteed to function correctly only with simple annotations that do not include arguments,
-  values, or parentheses. Complex annotations like are not currently supported and may lead to incorrect parsing or modifications.
+  values, or parentheses. Complex annotations are not currently supported and may lead to incorrect parsing or modifications.
 ## Usage
 Process Java files in a path (file or directory) with specified annotations.
 ```bash
