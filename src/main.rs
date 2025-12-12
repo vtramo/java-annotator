@@ -12,7 +12,7 @@ struct Args {
     /// containing files (recursively processed).
     path: PathBuf,
 
-    /// List of annotations to check for (e.g., @Override @Deprecated).
+    /// List of annotations to check for (e.g., @A @B).
     /// Specify the argument multiple times: -a @A -a @B
     #[arg(short, long, value_name = "ANNOTATION")]
     annotations: Vec<String>,

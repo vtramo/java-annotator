@@ -9,19 +9,22 @@ with a set of specified Java annotations.
 # 💡 What It Does
 This tool adds the specified Java annotations to all encountered Java types (class, interface, enum, inner class, or inner interface)
 that do not already possess that particular Java annotation.
+- You need to specify a fully qualified annotation name. The tool will automatically add the import if it isn't present.
 - The tool does not verify whether the specified annotation (e.g., @MyCustomTag) is actually defined or exists in the project's classpath.
 - Annotations are only added to the type declaration itself; methods, fields, and parameters are currently ignored.
 - The tool does not check if the annotation's usage is valid on the specific type.
 - The tool is guaranteed to function correctly only with simple annotations that do not include arguments,
   values, or parentheses. Complex annotations are not currently supported and may lead to incorrect parsing or modifications.
 ## Usage
-Process Java files in a path (file or directory) with specified annotations.
+Process Java files in a path (file or directory recursively) with specified annotations.
 ```bash
-cargo run -- <PATH> -a <ANNOTATION>
+annotator <PATH> -a <ANNOTATION>
 ```
 ### Example
+You need to specify one or more fully qualified annotation names.
+The tool will automatically add the import if it isn't present.
 ```bash
-cargo run -- src/java -a @Generated -a @CustomAnnotation 
+annotator src/java -a @lombok.Generated 
 
 src/java/java/a/b/C.java C
 src/java/a/B.java B
@@ -29,3 +32,9 @@ src/java/A.java A
 ```
 The output exclusively lists the paths of the Java source files that were actually modified, followed by the name of
 the Java types (class, interface, enum, inner class, or inner interface) that received the annotation within that file.
+## How to install
+Install [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+Then run:
+```bash
+cargo install annotator
+```
